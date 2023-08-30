@@ -13,8 +13,10 @@ public class Principal {
 		
 		
 		//Chamada de ação "Crédito ou Débido"
-		//conta.creditar(200);
-		//conta.debitar(0);
+		//conta.creditar(1000);
+		//conta.debitar(60);
+		
+		System.out.println(conta.getSaldo());
 		
 	}
 }

@@ -26,18 +26,17 @@ public class Conta {
 	}
 	
 	
-	public void creditar(double credito) {
-		saldo = saldo + credito;
-		System.out.println("Saldo atual R$: " + saldo);
+	public double creditar(double credito) {
+		saldo += credito;
+		return saldo;
 	}
 	
-	public void debitar(double debito) {
-		if (saldo < debito) {
-			System.out.println("Saldo insuficiente.");
+	public double debitar(double debito) {
+		if (saldo >= debito) {
+			saldo -= debito;
 		}else {
-			saldo = saldo - debito;
-			System.out.println("Saldo atual é R$:" + saldo);
+			System.out.println("Saldo Insificiente.");
 		}
+		return saldo;
 	}
-
 }
