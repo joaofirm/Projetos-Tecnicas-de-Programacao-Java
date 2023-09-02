@@ -9,14 +9,15 @@ public class Principal {
 		Conta conta = new Conta();
 		conta.setCliente("Lorena dos Anjos");
 		conta.setCodigo(0);
-		conta.setSaldo(100);
+		conta.setSaldo(0);
+		
+		ContaCorrente cc = new ContaCorrente();
+		cc.creditar(1000);
+		cc.setLimite(400);
+		cc.debitar(1300);
 		
 		
-		//Chamada de ação "Crédito ou Débido"
-		//conta.creditar(1000);
-		//conta.debitar(60);
-		
-		System.out.println(conta.getSaldo());
+		System.out.println(cc.getSaldo());
 		
 	}
 }
